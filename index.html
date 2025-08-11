@@ -1,129 +1,344 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de-CH">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zilji Performance | Autogarage & Tuning</title>
-  <meta name="description" content="Zilji Performance – Autogarage, Service & Performance-Tuning in Speicherschwendi (AR)." />
-  <meta property="og:title" content="Zilji Performance | Autogarage & Fahrzeugtuning"/>
-  <meta property="og:description" content="Werkstatt, Fahrzeugservice & Tuning in Speicherschwendi (AR). Termin einfach per WhatsApp."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:locale" content="de_CH"/>
+  <title>Zilji Performance | Autogarage & Tuning in Speicherschwendi (AR)</title>
+  <meta name="description" content="Zilji Performance – Werkstatt, Fahrzeugservice & Performance‑Tuning. Termin einfach per WhatsApp. Rehetobelstrasse 7, 9037 Speicherschwendi (AR)." />
+  <link rel="canonical" href="https://zilji-performance.github.io/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Zilji Performance | Autogarage & Tuning" />
+  <meta property="og:description" content="Service, Diagnose und Performance‑Tuning – alles aus einer Hand. Termin einfach per WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_CH" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (data URL) -->
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%231d4ed8'/%3E%3Ctext x='50' y='58' font-size='48' text-anchor='middle' fill='white' font-family='Arial'%3EZP%3C/text%3E%3C/svg%3E">
-  <script type="application/ld+json">{
-    "@context":"https://schema.org","@type":"AutoRepair",
-    "name":"Zilji Performance",
-    "address":{"@type":"PostalAddress","streetAddress":"Rehetobelstrasse 7","postalCode":"9037","addressLocality":"Speicherschwendi","addressRegion":"AR","addressCountry":"CH"},
-    "telephone":"+41 76 791 03 77",
-    "email":"rahim.zilji@gmail.com",
-    "url":"https://zilji-performance.github.io",
-    "sameAs":["https://instagram.com/zilji_performance"],
-    "openingHours":"Mo-So nach Vereinbarung",
-    "areaServed":"Ostschweiz"
-  }</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Zilji Performance",
+    "image": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1200&auto=format&fit=crop",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rehetobelstrasse 7",
+      "postalCode": "9037",
+      "addressLocality": "Speicherschwendi",
+      "addressRegion": "AR",
+      "addressCountry": "CH"
+    },
+    "telephone": "+41 76 791 03 77",
+    "email": "rahim.zilji@gmail.com",
+    "url": "https://zilji-performance.github.io",
+    "sameAs": ["https://instagram.com/zilji_performance"],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    }],
+    "areaServed": "Ostschweiz"
+  }
+  </script>
+
+  <!-- Fonts & Tailwind -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: { sans: ['Inter','ui-sans-serif','system-ui'] },
-          colors: { brand: { 600: '#1d4ed8', 700: '#1e40af' } }
+          colors: { brand: { 600: '#2A5DA8', 700: '#1F4B89' } }
         }
       }
     }
   </script>
+  <style>
+    /* Reduce CLS for lazy assets */
+    .ratio-16x9{position:relative;padding-bottom:56.25%;height:0}
+    .ratio-16x9>iframe,.ratio-16x9>img{position:absolute;inset:0;width:100%;height:100%}
+    .focus-ring:focus{outline:2px solid #1d4ed8; outline-offset:2px}
+  </style>
 </head>
 <body class="font-sans text-slate-800 bg-slate-50">
+  <a href="#main" class="sr-only focus:not-sr-only focus-ring absolute left-2 top-2 z-[100] bg-white/90 px-3 py-2 rounded-md border">Zum Inhalt springen</a>
 
-<header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
-  <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="#" class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-2xl bg-brand-600 text-white grid place-items-center shadow">ZP</div>
-      <div class="leading-tight">
-        <div class="text-xl font-extrabold tracking-tight">Zilji Performance</div>
-        <div class="text-[11px] uppercase text-slate-500">Autogarage & Tuning</div>
+  <!-- Header -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3" aria-label="Startseite">
+        <div class="w-10 h-10 rounded-2xl bg-brand-600 text-white grid place-items-center shadow">ZP</div>
+        <div class="leading-tight">
+          <div class="text-xl font-extrabold tracking-tight">Zilji Performance</div>
+          <div class="text-[11px] uppercase text-slate-500">Autogarage & Tuning</div>
+        </div>
+      </a>
+
+      <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-xl border" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <nav id="primary-nav" class="hidden md:flex items-center gap-6 text-sm" aria-label="Hauptnavigation">
+        <a href="#leistungen" class="hover:text-brand-600">Leistungen</a>
+        <a href="#kontakt" class="hover:text-brand-600">Kontakt</a>
+        <a href="#faq" class="hover:text-brand-600">FAQ</a>
+        <a href="#impressum" class="hover:text-brand-600">Impressum</a>
+        <a href="#datenschutz" class="hover:text-brand-600">Datenschutz</a>
+      </nav>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="md:hidden hidden border-t bg-white" role="dialog" aria-modal="true" aria-labelledby="mobileNavTitle">
+      <div class="max-w-7xl mx-auto px-4 py-3 grid gap-3 text-sm">
+        <span id="mobileNavTitle" class="sr-only">Mobiles Menü</span>
+        <a href="#leistungen" class="py-2" onclick="closeMobile()">Leistungen</a>
+        <a href="#kontakt" class="py-2" onclick="closeMobile()">Kontakt</a>
+        <a href="#faq" class="py-2" onclick="closeMobile()">FAQ</a>
+        <a href="#impressum" class="py-2" onclick="closeMobile()">Impressum</a>
+        <a href="#datenschutz" class="py-2" onclick="closeMobile()">Datenschutz</a>
       </div>
-    </a>
-    <nav class="hidden md:flex items-center gap-6 text-sm">
-      <a href="#leistungen" class="hover:text-brand-600">Leistungen</a>
-      <a href="#kontakt" class="hover:text-brand-600">Kontakt</a>
-      <a href="#impressum" class="hover:text-brand-600">Impressum</a>
-      <a href="#datenschutz" class="hover:text-brand-600">Datenschutz</a>
-    </nav>
-  </div>
-</header>
-
-<section class="relative">
-  <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?q=80&w=1600&auto=format&fit=crop" class="w-full h-[500px] object-cover" alt="Werkstatt">
-  <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
-    <h1 class="text-4xl sm:text-5xl font-bold">Mehr Leistung. Mehr Präzision. Mehr Fahrspass.</h1>
-    <p class="mt-4 max-w-2xl">Service, Diagnose und Performance‑Tuning – alles aus einer Hand. Zilji Performance bringt Ihr Fahrzeug auf das nächste Level.</p>
-    <a href="https://wa.me/41767910377?text=Hallo%20Zilji%20Performance%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." class="mt-5 inline-block px-6 py-3 rounded-2xl bg-brand-600 text-white">WhatsApp Nachricht</a>
-  </div>
-</section>
-
-<section id="leistungen" class="bg-slate-50 py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-3xl font-extrabold">Unsere Leistungen</h2>
-    <p class="mt-2 text-slate-600">Alle Preise auf Anfrage</p>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
-      <div class="bg-white p-6 rounded-2xl border"><div class="text-2xl">🛞</div><h3 class="mt-2 font-bold">Reifenmontage</h3><p class="text-sm mt-1">Montage, Auswuchten, Saisonwechsel.</p></div>
-      <div class="bg-white p-6 rounded-2xl border"><div class="text-2xl">🧰</div><h3 class="mt-2 font-bold">Inspektion & Wartung</h3><p class="text-sm mt-1">Service, Öl- & Filterwechsel, Flüssigkeits‑Check, MFK‑Vorbereitung.</p></div>
-      <div class="bg-white p-6 rounded-2xl border"><div class="text-2xl">🧼</div><h3 class="mt-2 font-bold">Innen- & Aussenreinigung</h3><p class="text-sm mt-1">Aufbereitung, Keramik, Geruchsneutralisation.</p></div>
-      <div class="bg-white p-6 rounded-2xl border"><div class="text-2xl">🎨</div><h3 class="mt-2 font-bold">Fahrzeugindividualisierung</h3><p class="text-sm mt-1">Scheibenfolierung, Felgen, Bodykits & optische Upgrades.</p></div>
-      <div class="bg-white p-6 rounded-2xl border"><div class="text-2xl">🧪</div><h3 class="mt-2 font-bold">Fehlerdiagnose</h3><p class="text-sm mt-1">OBD/CAN, Elektronik, Software.</p></div>
-      <div class="bg-white p-6 rounded-2xl border"><div class="text-2xl">🚀</div><h3 class="mt-2 font-bold">Chiptuning & Auspuffmontage</h3><p class="text-sm mt-1">Individuelles Mapping*, Abgasanlagen.</p></div>
     </div>
-    <p class="text-xs text-slate-500 mt-6">*Je nach Fahrzeug/Projekt umsetzbar.</p>
-  </div>
-</section>
+  </header>
 
-<section id="kontakt" class="bg-white py-16">
-  <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
-    <div>
-      <h2 class="text-3xl font-extrabold">Kontakt</h2>
-      <p class="mt-3">Rehetobelstrasse 7, 9037 Speicherschwendi</p>
-      <p>📞 <a href="tel:+41767910377">076 791 03 77</a></p>
-      <p>✉️ <a href="mailto:rahim.zilji@gmail.com">rahim.zilji@gmail.com</a></p>
-      <p>📸 <a href="https://instagram.com/zilji_performance" target="_blank" rel="noopener">@zilji_performance</a></p>
+  <!-- Hero -->
+  <section class="relative" aria-label="Intro">
+    <img src="m3-e36.jpg" class="w-full h-[520px] object-cover" alt="BMW M3 E36 in Estorilblau" loading="eager" fetchpriority="high">
+    <div class="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
+      <h1 class="text-4xl sm:text-5xl font-bold">Mehr Leistung. Mehr Präzision. Mehr Fahrspass.</h1>
+      <p class="mt-4 max-w-2xl">Service, Diagnose und Performance‑Tuning – alles aus einer Hand. Wir bringen Ihr Fahrzeug auf das nächste Level.</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-3">
+        <a href="https://wa.me/41767910377?text=Hallo%20Zilji%20Performance%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-brand-600 text-white shadow" target="_blank" rel="noopener" aria-label="WhatsApp Nachricht">WhatsApp Termin</a>
+        <a href="#kontakt" class="inline-flex items-center justify-center px-6 py-3 rounded-2xl border border-white/70 text-white">Telefon & E‑Mail</a>
+      </div>
     </div>
-    <div class="rounded-2xl overflow-hidden border">
-      <iframe src="https://www.google.com/maps?q=Rehetobelstrasse%207,%209037%20Speicherschwendi&output=embed" class="w-full h-[400px]" loading="lazy" allowfullscreen></iframe>
+  </section>
+
+  <main id="main">
+    <!-- Leistungen -->
+    <section id="leistungen" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-3xl font-extrabold">Unsere Leistungen</h2>
+        <p class="mt-2 text-slate-600">Preise auf Anfrage – wir beraten ehrlich und transparent.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          <article class="bg-white p-6 rounded-2xl border">
+            <div class="text-2xl" aria-hidden="true">🛞</div>
+            <h3 class="mt-2 font-bold">Reifenmontage</h3>
+            <p class="text-sm mt-1">Montage, Auswuchten, Saisonwechsel.</p>
+          </article>
+          <article class="bg-white p-6 rounded-2xl border">
+            <div class="text-2xl" aria-hidden="true">🧰</div>
+            <h3 class="mt-2 font-bold">Inspektion & Wartung</h3>
+            <p class="text-sm mt-1">Service, Öl‑ & Filterwechsel, Flüssigkeits‑Check, MFK‑Vorbereitung.</p>
+          </article>
+          <article class="bg-white p-6 rounded-2xl border">
+            <div class="text-2xl" aria-hidden="true">🧼</div>
+            <h3 class="mt-2 font-bold">Innen‑ & Aussenreinigung</h3>
+            <p class="text-sm mt-1">Aufbereitung, Keramik, Geruchsneutralisation.</p>
+          </article>
+          <article class="bg-white p-6 rounded-2xl border">
+            <div class="text-2xl" aria-hidden="true">🎨</div>
+            <h3 class="mt-2 font-bold">Fahrzeugindividualisierung</h3>
+            <p class="text-sm mt-1">Scheibenfolierung, Felgen, Bodykits & optische Upgrades.</p>
+          </article>
+          <article class="bg-white p-6 rounded-2xl border">
+            <div class="text-2xl" aria-hidden="true">⚠️</div>
+            <h3 class="mt-2 font-bold">Fehlerdiagnose</h3>
+            <p class="text-sm mt-1">OBD/CAN, Elektronik, Software.</p>
+          </article>
+          <article class="bg-white p-6 rounded-2xl border">
+            <div class="text-2xl" aria-hidden="true">🚀</div>
+            <h3 class="mt-2 font-bold">Chiptuning & Auspuffmontage</h3>
+            <p class="text-sm mt-1">Individuelles Mapping*, Abgasanlagen.</p>
+          </article>
+        </div>
+        <p class="text-xs text-slate-500 mt-6">*Je nach Fahrzeug/Projekt umsetzbar.</p>
+      </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="kontakt" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl font-extrabold">Kontakt</h2>
+          <p class="mt-3">Rehetobelstrasse 7, 9037 Speicherschwendi</p>
+          <p>📞 <a class="underline decoration-transparent hover:decoration-inherit" href="tel:+41767910377">076 791 03 77</a></p>
+          <p>✉️ <a class="underline decoration-transparent hover:decoration-inherit" href="mailto:rahim.zilji@gmail.com">rahim.zilji@gmail.com</a></p>
+          <p>📸 <a class="underline decoration-transparent hover:decoration-inherit" href="https://instagram.com/zilji_performance" target="_blank" rel="noopener">@zilji_performance</a></p>
+          <div class="mt-6 p-4 rounded-xl bg-slate-50 border">
+            <p class="text-sm text-slate-600">Öffnungszeiten: nach Vereinbarung (Mo–So). Schreiben Sie uns per WhatsApp – wir antworten schnell.</p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border">
+          <!-- 2‑Klick‑Lösung für eingebettete Karten -->
+          <div id="mapWrapper" class="ratio-16x9 bg-slate-100 grid place-items-center">
+            <div class="text-center p-6">
+              <p class="text-sm text-slate-600 max-w-md mx-auto">Zum Schutz Ihrer Daten wird Google Maps erst nach Ihrer Zustimmung geladen. Dadurch kann Google personenbezogene Daten verarbeiten.</p>
+              <button id="loadMap" class="mt-4 inline-flex items-center justify-center px-4 py-2 rounded-xl bg-brand-600 text-white">Karte laden</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold">Häufige Fragen</h2>
+        <div class="mt-6 divide-y border rounded-2xl bg-white">
+          <details class="group p-5" name="faq">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium list-none">
+              <span>Wie schnell bekomme ich einen Termin?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-600">Oft noch am selben Tag. Am schnellsten geht es via WhatsApp.</p>
+          </details>
+          <details class="group p-5" name="faq">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium list-none">
+              <span>Bietet ihr Garantie auf Arbeiten?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-600">Ja, auf reguläre Service‑ und Montagearbeiten gemäss Offerte.</p>
+          </details>
+          <details class="group p-5" name="faq">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium list-none">
+              <span>Kann ich bar oder mit Twint bezahlen?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-600">Ja, Bar und Twint sind möglich.</p>
+          </details>
+          <details class="group p-5" name="faq">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium list-none">
+              <span>Unterstützt ihr MFK‑Vorbereitungen?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-600">Ja, inkl. Checkliste und Behebung nötiger Mängel.</p>
+          </details>
+          <details class="group p-5" name="faq">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium list-none">
+              <span>Wie läuft das Chiptuning ab?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-600">Wir lesen die Software aus, erstellen ein individuelles Mapping und testen anschliessend. Nur wo sinnvoll und sicher.</p>
+          </details>
+          <details class="group p-5" name="faq">
+            <summary class="flex cursor-pointer items-center justify-between text-left font-medium list-none">
+              <span>Habt ihr Ersatzwagen oder Hol‑ & Bringservice?</span>
+              <span class="ml-4 transition-transform group-open:rotate-180" aria-hidden="true">▾</span>
+            </summary>
+            <p class="mt-2 text-sm text-slate-600">Nach Absprache möglich. Schreib uns kurz per WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Impressum -->
+    <section id="impressum" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold">Impressum</h2>
+        <p class="mt-4">Zilji Performance<br>Rehetobelstrasse 7<br>9037 Speicherschwendi (AR)<br>Schweiz</p>
+        <p class="mt-2">Telefon: <a class="underline decoration-transparent hover:decoration-inherit" href="tel:+41767910377">+41 76 791 03 77</a><br>E‑Mail: <a class="underline decoration-transparent hover:decoration-inherit" href="mailto:rahim.zilji@gmail.com">rahim.zilji@gmail.com</a></p>
+        <p class="mt-4">Vertretungsberechtigt: Rahim Zilji</p>
+        <p class="mt-4 text-sm text-slate-500">Hinweis: Schweizer Recht. Keine Abmahnung ohne vorherigen Kontakt.</p>
+      </div>
+    </section>
+
+    <!-- Datenschutz -->
+    <section id="datenschutz" class="bg-slate-50 py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold">Datenschutzerklärung</h2>
+        <div class="mt-4 space-y-4">
+          <p>Wir verarbeiten personenbezogene Daten nur, wenn Sie uns freiwillig kontaktieren (Telefon, E‑Mail, WhatsApp). Angaben dienen ausschliesslich zur Bearbeitung Ihrer Anfrage und werden nicht an Dritte weitergegeben.</p>
+          <p>Wir verwenden keine Cookies und kein Tracking. Eingebettete Inhalte wie Google Maps werden erst nach Ihrer Zustimmung geladen und unterliegen den Datenschutzbestimmungen von Google.</p>
+          <p>Fragen zum Datenschutz: <a class="underline decoration-transparent hover:decoration-inherit" href="mailto:rahim.zilji@gmail.com">rahim.zilji@gmail.com</a></p>
+        </div>
+      </div>
+    </section>
+      <!-- Bewertungen -->
+    <section id="bewertungen" class="bg-white py-16">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-2xl font-bold">Bewertungen</h2>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <figure class="bg-slate-50 border rounded-2xl p-5">
+            <figcaption class="font-semibold">Luca S.</figcaption>
+            <p class="text-yellow-500" aria-label="5 von 5 Sternen">★★★★★</p>
+            <blockquote class="text-sm text-slate-700 mt-2">Top Service! Termin am selben Tag und super Beratung. Auto fährt wie neu.</blockquote>
+          </figure>
+          <figure class="bg-slate-50 border rounded-2xl p-5">
+            <figcaption class="font-semibold">Mira K.</figcaption>
+            <p class="text-yellow-500" aria-label="5 von 5 Sternen">★★★★★</p>
+            <blockquote class="text-sm text-slate-700 mt-2">Sehr sauber gearbeitet, fairer Preis. Klare Empfehlung!</blockquote>
+          </figure>
+          <figure class="bg-slate-50 border rounded-2xl p-5">
+            <figcaption class="font-semibold">Sascha R.</figcaption>
+            <p class="text-yellow-500" aria-label="5 von 5 Sternen">★★★★★</p>
+            <blockquote class="text-sm text-slate-700 mt-2">Chiptuning genau nach Wunsch umgesetzt. Spürbar mehr Leistung.</blockquote>
+          </figure>
+          <figure class="bg-slate-50 border rounded-2xl p-5">
+            <figcaption class="font-semibold">Anja P.</figcaption>
+            <p class="text-yellow-500" aria-label="5 von 5 Sternen">★★★★★</p>
+            <blockquote class="text-sm text-slate-700 mt-2">Unkomplizierte Kommunikation per WhatsApp und schnelle Abwicklung.</blockquote>
+          </figure>
+          <figure class="bg-slate-50 border rounded-2xl p-5 sm:col-span-2 lg:col-span-1">
+            <figcaption class="font-semibold">Deniz T.</figcaption>
+            <p class="text-yellow-500" aria-label="4 von 5 Sternen">★★★★☆</p>
+            <blockquote class="text-sm text-slate-700 mt-2">Sehr zufrieden, nur Wartezeit vor Ort etwas länger. Ergebnis top.</blockquote>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-900 text-slate-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p>© <span id="year"></span> Zilji Performance – Alle Rechte vorbehalten</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="impressum" class="bg-slate-50 py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-2xl font-bold">Impressum</h2>
-    <p class="mt-4">Zilji Performance<br>Rehetobelstrasse 7<br>9037 Speicherschwendi (AR)<br>Schweiz</p>
-    <p class="mt-2">Telefon: <a href="tel:+41767910377">+41 76 791 03 77</a><br>E-Mail: <a href="mailto:rahim.zilji@gmail.com">rahim.zilji@gmail.com</a></p>
-    <p class="mt-4">Vertretungsberechtigt: Rahim Zilji</p>
-    <p class="mt-4 text-sm text-slate-500">Hinweis: Schweizer Recht. Keine Abmahnung ohne vorherigen Kontakt.</p>
-  </div>
-</section>
+  <script>
+    // Jahr setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-<section id="datenschutz" class="bg-white py-16">
-  <div class="max-w-7xl mx-auto px-4">
-    <h2 class="text-2xl font-bold">Datenschutzerklärung</h2>
-    <p class="mt-4">Wir erheben und verarbeiten keine personenbezogenen Daten, ausser Sie kontaktieren uns freiwillig (z. B. per Telefon, E-Mail oder WhatsApp). Diese Angaben werden ausschliesslich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
-    <p class="mt-4">Unsere Website verwendet keine Cookies und kein Tracking. Eingebettete Inhalte wie Google Maps unterliegen den Datenschutzbestimmungen von Google.</p>
-    <p class="mt-4">Bei Fragen zum Datenschutz erreichen Sie uns unter: <a href="mailto:rahim.zilji@gmail.com">rahim.zilji@gmail.com</a></p>
-  </div>
-</section>
+    // Mobile Navigation
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    function closeMobile(){ mobileNav.classList.add('hidden'); navToggle.setAttribute('aria-expanded','false'); }
+    navToggle?.addEventListener('click', () => {
+      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+      navToggle.setAttribute('aria-expanded', String(!expanded));
+      mobileNav.classList.toggle('hidden');
+    });
+    window.closeMobile = closeMobile;
 
-<footer class="bg-slate-900 text-slate-200 py-8">
-  <div class="max-w-7xl mx-auto px-4 text-center">
-    <p>© <span id="year"></span> Zilji Performance – Alle Rechte vorbehalten</p>
-  </div>
-</footer>
+    // Zwei‑Klick Karte
+    const btn = document.getElementById('loadMap');
+    const wrapper = document.getElementById('mapWrapper');
+    btn?.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.google.com/maps?q=Rehetobelstrasse%207,%209037%20Speicherschwendi&output=embed';
+      iframe.loading = 'lazy';
+      iframe.setAttribute('title','Google Maps: Standort Zilji Performance');
+      wrapper.innerHTML = '';
+      wrapper.appendChild(iframe);
+    });
+  </script>
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/41767910377?text=Hallo%20Zilji%20Performance%2C%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." target="_blank" rel="noopener" class="fixed right-4 bottom-4 z-50 inline-flex items-center gap-2 px-4 py-3 rounded-full bg-brand-600 text-white shadow-lg animate-swing focus:outline-none focus:ring-2 focus:ring-white/70" aria-label="WhatsApp Chat öffnen">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 2.11.547 4.082 1.502 5.799L0 24l6.37-1.67A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.94 9.94 0 0 1-5.063-1.389l-.363-.216-3.003.786.804-2.933-.237-.379A9.965 9.965 0 1 1 22 12c0 5.514-4.486 10-10 10zm5.27-7.018c-.29-.145-1.706-.842-1.972-.937-.266-.096-.46-.145-.654.145-.193.29-.75.937-.92 1.13-.169.193-.339.218-.628.073-.29-.145-1.222-.45-2.33-1.436-.861-.768-1.442-1.716-1.612-2.006-.169-.29-.018-.447.127-.592.13-.129.29-.339.435-.508.145-.169.193-.29.29-.483.096-.193.048-.363-.024-.508-.072-.145-.654-1.58-.897-2.165-.236-.566-.476-.49-.654-.5l-.557-.01c-.193 0-.508.073-.774.363-.266.29-1.016.992-1.016 2.418s1.04 2.804 1.183 2.997c.145.193 2.047 3.125 4.96 4.382.694.299 1.235.477 1.657.611.696.222 1.33.19 1.83.115.558-.083 1.706-.697 1.948-1.37.242-.674.242-1.251.169-1.37-.072-.12-.266-.193-.557-.338z"/></svg>
+    <span class="sr-only">WhatsApp</span>
+  </a>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-
+  <style>
+    @keyframes swing{ 0%{transform:translateY(0)} 50%{transform:translateY(-6px)} 100%{transform:translateY(0)} }
+    .animate-swing{ animation:swing 2.2s ease-in-out infinite }
+  </style>
 </body>
 </html>
